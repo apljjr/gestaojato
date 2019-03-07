@@ -3,6 +3,8 @@ package br.com.gestaojato.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 
 @Document
 public class Cliente {
@@ -11,16 +13,18 @@ public class Cliente {
     private String id;
     private String nome;
     private String sobrenome;
-    private String nascimento;
+    private Date nascimento;
     private String cep;
     private String logradouro;
+    private String contato;
 
-    public Cliente(String nome, String sobrenome, String nascimento, String cep, String logradouro) {
+    public Cliente(String nome, String sobrenome, Date nascimento, String cep, String logradouro, String contato) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.nascimento = nascimento;
         this.cep = cep;
         this.logradouro = logradouro;
+        this.contato = contato;
     }
 
     public String getId() {
@@ -47,11 +51,11 @@ public class Cliente {
         this.sobrenome = sobrenome;
     }
 
-    public String getNascimento() {
+    public Date getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(String nascimento) {
+    public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -69,5 +73,13 @@ public class Cliente {
 
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
     }
 }

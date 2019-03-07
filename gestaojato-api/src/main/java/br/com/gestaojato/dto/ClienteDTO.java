@@ -2,27 +2,31 @@ package br.com.gestaojato.dto;
 
 import br.com.gestaojato.model.Cliente;
 
+import java.util.Date;
+
 public class ClienteDTO {
 
     private String nome;
     private String sobrenome;
-    private String nascimento;
+    private Date nascimento;
     private String cep;
     private String logradouro;
+    private String contato;
 
     public ClienteDTO () {}
 
 
-    public ClienteDTO(String nome, String sobrenome, String nascimento, String cep, String logradouro) {
+    public ClienteDTO(String nome, String sobrenome, Date nascimento, String cep, String logradouro, String contato) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.nascimento = nascimento;
         this.cep = cep;
         this.logradouro = logradouro;
+        this.contato = contato;
     }
 
     public Cliente transformaParaObjeto() {
-        return new Cliente(nome, sobrenome, nascimento, cep, logradouro);
+        return new Cliente(nome, sobrenome, nascimento, cep, logradouro, contato);
     }
 
 
@@ -42,11 +46,11 @@ public class ClienteDTO {
         this.sobrenome = sobrenome;
     }
 
-    public String getNascimento() {
+    public Date getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(String nascimento) {
+    public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
 
@@ -64,5 +68,13 @@ public class ClienteDTO {
 
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
     }
 }
