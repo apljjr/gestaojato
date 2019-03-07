@@ -45,7 +45,7 @@ public class ClienteController {
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
-    @ApiOperation(value = "Cria cliente um novo cliente")
+    @ApiOperation(value = "Cria um novo cliente")
     @PostMapping
     @ResponseBody
     @ResponseStatus(code = HttpStatus.CREATED)

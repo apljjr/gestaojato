@@ -15,7 +15,6 @@ public class ClienteDTO {
 
     public ClienteDTO () {}
 
-
     public ClienteDTO(String nome, String sobrenome, Date nascimento, String cep, String logradouro, String contato) {
         this.nome = nome;
         this.sobrenome = sobrenome;
