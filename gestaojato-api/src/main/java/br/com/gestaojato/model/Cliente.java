@@ -18,6 +18,8 @@ public class Cliente {
     private String logradouro;
     private String contato;
 
+    public Cliente () {}
+
     public Cliente(String nome, String sobrenome, Date nascimento, String cep, String logradouro, String contato) {
         this.nome = nome;
         this.sobrenome = sobrenome;

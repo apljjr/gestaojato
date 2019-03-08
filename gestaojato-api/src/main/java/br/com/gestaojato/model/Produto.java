@@ -11,6 +11,8 @@ public class Produto {
     private Double preco;
     private Integer tempoGastoMin;
 
+    public Produto () {}
+
     public Produto(String nome, String descricao, Double preco, Integer tempoGastoMin) {
         this.nome = nome;
         this.descricao = descricao;

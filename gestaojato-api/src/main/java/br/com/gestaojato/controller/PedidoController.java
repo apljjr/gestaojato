@@ -42,14 +42,14 @@ public class PedidoController {
     @ResponseBody
     @ResponseStatus(code = HttpStatus.CREATED)
     public ResponseEntity<?> criarPedido (@RequestBody PedidoDTO pedido) {
-        return new ResponseEntity<>(pedidoService.save(pedido.transformaParaObjeto()), HttpStatus.CREATED);
+        return new ResponseEntity<>(pedidoService.criar(pedido.transformaParaObjeto()), HttpStatus.CREATED);
     }
 
     @ApiOperation(value = "Atualiza um pedido")
-    @PostMapping (value = "/atualizar")
+    @PutMapping (value = "/atualizar")
     @ResponseBody
     public ResponseEntity<?> atualizarPedido (@RequestBody Pedido pedido) {
-        return  new ResponseEntity<>(pedidoService.save(pedido), HttpStatus.OK);
+        return  new ResponseEntity<>(pedidoService.atualizar(pedido), HttpStatus.OK);
     }
 
 }

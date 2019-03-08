@@ -4,19 +4,19 @@ import br.com.gestaojato.model.Cliente;
 import br.com.gestaojato.model.Pedido;
 import br.com.gestaojato.model.Produto;
 
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public class PedidoDTO {
 
     private Cliente cliente;
     private List<Produto> produtos;
-    private LocalDate data;
+    private Date data;
     private Double desconto;
 
     public PedidoDTO() {}
 
-    public PedidoDTO(Cliente cliente, List<Produto> produtos, LocalDate data, Double desconto) {
+    public PedidoDTO(Cliente cliente, List<Produto> produtos, Date data, Double desconto) {
         this.cliente = cliente;
         this.produtos = produtos;
         this.data = data;
@@ -41,11 +41,11 @@ public class PedidoDTO {
         this.produtos = produtos;
     }
 
-    public LocalDate getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(Date data) {
         this.data = data;
     }
 

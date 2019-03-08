@@ -8,5 +8,6 @@ import java.util.Optional;
 public interface PedidoService {
     List<Pedido> findAll();
     Optional<Pedido> findById(String id);
-    Pedido save(Pedido pedido);
+    Pedido criar(Pedido pedido);
+    Pedido atualizar(Pedido pedido);
 }

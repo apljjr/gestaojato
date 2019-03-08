@@ -3,7 +3,7 @@ package br.com.gestaojato.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Document
@@ -13,10 +13,13 @@ public class Pedido {
     private String id;
     private Cliente cliente;
     private List<Produto> produtos;
-    private LocalDate data;
+    private Date data;
     private Double desconto;
+    private String status;
 
-    public Pedido(Cliente cliente, List<Produto> produtos, LocalDate data, Double desconto) {
+    public Pedido () {}
+
+    public Pedido(Cliente cliente, List<Produto> produtos, Date data, Double desconto) {
         this.cliente = cliente;
         this.produtos = produtos;
         this.data = data;
@@ -47,11 +50,11 @@ public class Pedido {
         this.produtos = produtos;
     }
 
-    public LocalDate getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
@@ -61,5 +64,13 @@ public class Pedido {
 
     public void setDesconto(Double desconto) {
         this.desconto = desconto;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

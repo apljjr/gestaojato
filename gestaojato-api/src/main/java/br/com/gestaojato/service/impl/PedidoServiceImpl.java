@@ -3,6 +3,7 @@ package br.com.gestaojato.service.impl;
 import br.com.gestaojato.model.Pedido;
 import br.com.gestaojato.repository.PedidoRepository;
 import br.com.gestaojato.service.PedidoService;
+import br.com.gestaojato.util.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,9 +27,14 @@ public class PedidoServiceImpl implements PedidoService {
     }
 
     @Override
-    public Pedido save(Pedido pedido) {
+    public Pedido criar(Pedido pedido) {
+        pedido.setStatus(Status.AGUARDANDO_ATENDIMENTO);
         return pedidoRepository.save(pedido);
     }
 
+    @Override
+    public Pedido atualizar(Pedido pedido) {
+        return pedidoRepository.save(pedido);
+    }
 
 }
