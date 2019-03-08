@@ -2,8 +2,6 @@ package br.com.gestaojato.model;
 
 import org.springframework.data.annotation.Id;
 
-import java.time.Duration;
-
 public class Produto {
 
     @Id

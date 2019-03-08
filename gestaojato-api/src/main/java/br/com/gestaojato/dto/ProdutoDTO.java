@@ -2,8 +2,6 @@ package br.com.gestaojato.dto;
 
 import br.com.gestaojato.model.Produto;
 
-import java.time.Duration;
-
 public class ProdutoDTO {
 
     private String nome;
